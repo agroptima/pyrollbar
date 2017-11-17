@@ -987,6 +987,7 @@ def _build_request_data(request):
     Returns a dictionary containing data from the request.
     Can handle webob or werkzeug-based request objects.
     """
+    from rest_framework.request import Request as RestFrameworkRequest
 
     # webob (pyramid)
     if WebobBaseRequest and isinstance(request, WebobBaseRequest):
